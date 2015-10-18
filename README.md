@@ -4,7 +4,7 @@ Palm Portable Keyboard USB conversion
 
 ![keyboard](/pictures/webcam-1.jpg)
 
-inspired by [this great project](http://www.cy384.com/projects/palm-keyboard.html) ([featured on Hackaday.com](featured on HackADay http://hackaday.com/2015/04/04/repurposing-a-palm-portable-keyboard/))
+inspired by [this great project](http://www.cy384.com/projects/palm-keyboard.html) ([featured on Hackaday.com]([featured on HackADay](http://hackaday.com/2015/04/04/repurposing-a-palm-portable-keyboard/))
 
 with the main goals/changes:
 * keep electronics inside the fold-up case
@@ -42,21 +42,23 @@ since these keyboards where built for multiple kinds of PDAs the dock-adapters h
 
 this common flex cable has the following pinout
 viewed from above - "through" the keyboard; from left to right:
-  > F1 = VCC
-  > F2 = RX_PIN
-  > F3 = RTS_PIN
-  > F4 = probably TX_PIN, unused anyway
-  > F5 = PIN_DCD
-  > F6 = GND
+ F1 | VCC
+ F2 | RX_PIN
+ F3 | RTS_PIN
+ F4 | probably TX_PIN, unused anyway
+ F5 | PIN_DCD
+ F6 | GND
 
 on the Micro the following pins are used:
-> reset to GND via the tactile switch
-> F1 = VCC = Pin 5
-> F6 = GND = Pin 6
-> F2 = RX = Pin 3 (because of INT0)
-> F3 = RTS = Pin 2
-> F5 = DCD = Pin 4
-> pulldown resistor from Pin 8 to Pin 3
+|flex cable||Micro Pin
+|---|---|---|
+||| reset to GND via the tactile switch
+| F1 | VCC | Pin 5
+| F6 | GND | Pin 6
+| F2 | RX | Pin 3 (because of INT0)
+| F3 | RTS | Pin 2
+| F5 | DCD | Pin 4
+||| pulldown resistor from Pin 8 to Pin 3
 
 
 assembly
@@ -64,7 +66,7 @@ assembly
 * wire the usb-breakout to the Micro (in the final assembly the former usb port faces the micro-usb breakout)
 * wire the Micro to the flex cable where the spring-pins of the docking connector used to be
 * on the Micro board Gnd and Reset pins are spaced so that the reset button fits perfectly in between (covering +3V and +5V pins which need to be insulated!) putting the button on the board so that it sits flush 
-* remove the support of the usb-port in the 3d printed part
+* remove the support of the usb-port in the 3d printed part and *slightly* drill out the screw holes with a 3mm drill, so that the screw heads are flush with the surface
 * fixing the Micro and the usb-breakout with some hot-melt glue to the 3d-printed part
 * slide in the back-cover (might need to apply some heat to bend it a litte over the electronics, should close up flush with the other 3d printed part)
 
