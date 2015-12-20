@@ -42,6 +42,9 @@ since these keyboards where built for multiple kinds of PDAs the dock-adapters h
 
 this common flex cable has the following pinout
 viewed from above - "through" the keyboard; from left to right:
+
+Number | Name
+---|---
  F1 | VCC
  F2 | RX_PIN
  F3 | RTS_PIN
@@ -49,16 +52,17 @@ viewed from above - "through" the keyboard; from left to right:
  F5 | PIN_DCD
  F6 | GND
 
-on the Micro the following pins are used:
-|flex cable||Micro Pin
-|---|---|---|
-||| reset to GND via the tactile switch
-| F1 | VCC | Pin 5
-| F6 | GND | Pin 6
-| F2 | RX | Pin 3 (because of INT0)
-| F3 | RTS | Pin 2
-| F5 | DCD | Pin 4
-||| pulldown resistor from Pin 8 to Pin 3
+On the Micro the following pins are used:
+
+flex cable | name | Micro Pin
+--- | --- | ---
+-|-|(reset to GND via the tactile switch)
+ F1 | VCC | Pin 5
+ F6 | GND | Pin 6
+ F2 |  RX | Pin 3
+ F3 | RTS | Pin 2
+ F5 | DCD | Pin 4
+-|-|pulldown resistor from Pin 8 to Pin 3
 
 
 assembly
